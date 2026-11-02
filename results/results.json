@@ -1,0 +1,226 @@
+{
+  "stores": {
+    "starbucks_us": 13608,
+    "starbucks_mapped_to_county": 13570,
+    "dunkin_us": 4898
+  },
+  "counties": {
+    "counties": 3108,
+    "states": 49,
+    "starbucks_in_counties": 13428,
+    "counties_with_starbucks": 1084,
+    "top_10pct_counties_store_share": 0.8558236520703009
+  },
+  "validation": {
+    "method": "5-fold cross-validation grouped by state: every county is predicted by a model that never saw its state",
+    "baseline": {
+      "deviance_explained": 0.8672942790168423,
+      "mae": 2.529884582101464,
+      "top_decile_capture": 0.8366845397676497,
+      "has_store_auc": 0.9359289084491635
+    },
+    "model": {
+      "deviance_explained": 0.9348700397141548,
+      "mae": 1.4936793450799406,
+      "top_decile_capture": 0.8406315162347334,
+      "has_store_auc": 0.964385856803232
+    },
+    "mae_reduction": 0.4095859725587928
+  },
+  "drivers": {
+    "log_population": 0.3159,
+    "jobs_food_service": 0.2656,
+    "bachelors_plus": 0.121,
+    "jobs_professional": 0.1179,
+    "jobs_information": 0.0722,
+    "age_20_39": 0.0203,
+    "housing_cost": 0.0183,
+    "log_density": 0.0155,
+    "poverty_rate": 0.0141,
+    "unemployment": 0.0097,
+    "avg_income": 0.0086,
+    "jobs_finance": 0.0082,
+    "jobs_retail": 0.0082,
+    "age_65_plus": 0.0043
+  },
+  "competition": {
+    "counties_judged": 389,
+    "penetration_by_dunkin_per_100k": [
+      {
+        "dunkin_band": "none",
+        "counties": 145.0,
+        "penetration": 1.333
+      },
+      {
+        "dunkin_band": "0-2",
+        "counties": 138.0,
+        "penetration": 1.045
+      },
+      {
+        "dunkin_band": "2-5",
+        "counties": 64.0,
+        "penetration": 0.834
+      },
+      {
+        "dunkin_band": "5+",
+        "counties": 42.0,
+        "penetration": 0.832
+      }
+    ],
+    "east_only_penetration_by_dunkin_per_100k": [
+      {
+        "dunkin_band": "none",
+        "counties": 27.0,
+        "penetration": 1.159
+      },
+      {
+        "dunkin_band": "0-2",
+        "counties": 113.0,
+        "penetration": 0.969
+      },
+      {
+        "dunkin_band": "2-5",
+        "counties": 64.0,
+        "penetration": 0.834
+      },
+      {
+        "dunkin_band": "5+",
+        "counties": 42.0,
+        "penetration": 0.832
+      }
+    ],
+    "spearman_gap_vs_dunkin": -0.28823354558729475
+  },
+  "white_space": {
+    "total_gap_stores": 1663.8400815125067,
+    "counties_gap_ge_3": 120,
+    "uncontested_counties": 56,
+    "uncontested_gap_stores": 550.563655522973,
+    "uncontested_population": 37342771.0,
+    "zero_store_counties_expected_ge_1": 31,
+    "top10_uncontested": [
+      {
+        "name": "harris county",
+        "state": "TX",
+        "population": 4657972.0,
+        "starbucks": 221.0,
+        "expected": 292.8,
+        "gap": 71.8,
+        "dunkin": 6.0
+      },
+      {
+        "name": "miami-dade county",
+        "state": "FL",
+        "population": 2713295.0,
+        "starbucks": 100.0,
+        "expected": 144.0,
+        "gap": 44.0,
+        "dunkin": 20.0
+      },
+      {
+        "name": "dallas county",
+        "state": "TX",
+        "population": 2620154.0,
+        "starbucks": 120.0,
+        "expected": 161.2,
+        "gap": 41.2,
+        "dunkin": 8.0
+      },
+      {
+        "name": "erie county",
+        "state": "NY",
+        "population": 919034.0,
+        "starbucks": 22.0,
+        "expected": 45.5,
+        "gap": 23.5,
+        "dunkin": 3.0
+      },
+      {
+        "name": "williamson county",
+        "state": "TX",
+        "population": 546251.0,
+        "starbucks": 23.0,
+        "expected": 43.4,
+        "gap": 20.4,
+        "dunkin": 0.0
+      },
+      {
+        "name": "travis county",
+        "state": "TX",
+        "population": 1227585.0,
+        "starbucks": 65.0,
+        "expected": 85.1,
+        "gap": 20.1,
+        "dunkin": 3.0
+      },
+      {
+        "name": "dane county",
+        "state": "WI",
+        "population": 537453.0,
+        "starbucks": 18.0,
+        "expected": 33.7,
+        "gap": 15.7,
+        "dunkin": 0.0
+      },
+      {
+        "name": "hennepin county",
+        "state": "MN",
+        "population": 1247847.0,
+        "starbucks": 77.0,
+        "expected": 90.4,
+        "gap": 13.4,
+        "dunkin": 0.0
+      },
+      {
+        "name": "santa barbara county",
+        "state": "CA",
+        "population": 445298.0,
+        "starbucks": 24.0,
+        "expected": 36.8,
+        "gap": 12.8,
+        "dunkin": 0.0
+      },
+      {
+        "name": "santa cruz county",
+        "state": "CA",
+        "population": 274856.0,
+        "starbucks": 17.0,
+        "expected": 28.5,
+        "gap": 11.5,
+        "dunkin": 0.0
+      }
+    ],
+    "most_oversupplied": [
+      {
+        "name": "maricopa county",
+        "state": "AZ",
+        "starbucks": 336.0,
+        "expected": 214.1
+      },
+      {
+        "name": "king county",
+        "state": "WA",
+        "starbucks": 330.0,
+        "expected": 209.2
+      },
+      {
+        "name": "clark county",
+        "state": "NV",
+        "starbucks": 197.0,
+        "expected": 96.5
+      },
+      {
+        "name": "new york county",
+        "state": "NY",
+        "starbucks": 237.0,
+        "expected": 144.7
+      },
+      {
+        "name": "riverside county",
+        "state": "CA",
+        "starbucks": 137.0,
+        "expected": 47.0
+      }
+    ]
+  }
+}
